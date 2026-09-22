@@ -1,18 +1,17 @@
-# Ex.No:1(D) ARRAYS
+# Ex.No:1(C) LOOPING STATEMENT
 
 ## QUESTION:
-Write a Java program to print all elements in an array that are greater than a given value
-
+Print Hollow Square Pattern
 
 ## AIM:
-To write a Java program that prints all elements in an array greater than a given value.
+To write a Java program to print a hollow square pattern using asterisks (*).
 
 ## ALGORITHM :
-1. Start the program and create a Scanner object.
-2. Read the size n and elements of the array.
-3. Read a value to compare with.
-4. Use a loop to check and print elements greater than the given value.
-5. End the program.
+1.Start the program and create a Scanner object.
+2.Read an integer n representing the size of the square.
+3.Use nested loops to iterate through rows (i) and columns (j).
+4.Print * for boundary positions (first/last row or column), else print space.
+5.End the program.
 
 
 
@@ -24,53 +23,41 @@ To write a Java program that prints all elements in an array greater than a give
 **Developed by:** Sanjai T
 
 **Register Number:** 212224240144
+
 ### SOURCE CODE:
 ```java
 import java.util.Scanner;
 
-public class ElementsGreaterThanX {
-
+public class HollowSquare {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
 
-        int n = scanner.nextInt();     // size of array
-        int[] arr = new int[n];
-
-        for(int i = 0; i < n; i++) {
-            arr[i] = scanner.nextInt();  // array elements
-        }
-
-        int x = scanner.nextInt();     // value to compare
-
-        boolean found = false;
-
-        for(int i = 0; i < n; i++) {
-            if(arr[i] > x) {
-                System.out.println(arr[i]);
-                found = true;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i == 1 || i == n || j == 1 || j == n) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
             }
+            System.out.println();
         }
 
-        if(!found) {
-            System.out.println("No elements greater than " + x);
-        }
+        sc.close();
     }
 }
-
 ```
 
-
-
-
-
-
 ## OUTPUT:
-<img width="1141" height="823" alt="image" src="https://github.com/user-attachments/assets/34a186f8-3e64-4b59-a0c6-c0fd2da49e52" />
+<img width="1211" height="654" alt="image" src="https://github.com/user-attachments/assets/983aaead-17af-41d8-ba15-73b241800145" />
 
 
 
 ## RESULT:
-The program successfully prints all array elements greater than the given value.
+The program successfully prints a hollow square pattern of size n × n.
+
+
 
 
 
