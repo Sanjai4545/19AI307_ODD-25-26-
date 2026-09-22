@@ -17,10 +17,6 @@ To write a Java program that demonstrates calling one method from another method
 6. Call the cube() method and display the result.
 7. Stop the program.
 
-
-
-
-
 ## PROGRAM:
  ```
 /*
